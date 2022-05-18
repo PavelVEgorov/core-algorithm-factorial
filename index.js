@@ -6,15 +6,21 @@ function iterativeFactorialCalculation(num) {
   }
   return result;
 }
-console.log(iterativeFactorialCalculation(6)) 
+// console.log(iterativeFactorialCalculation(6)) 
 
 //Release 1. Рекурсивный расчет факториала
  function recursiveFactorialCalc(num) {
-  if(num === 1) {
+  if (num === 1) {
     return num;
   } 
+  if (num === 0){return 1}
     return  num * recursiveFactorialCalc(num - 1);
  }
-console.log(recursiveFactorialCalc(6))
+// console.log(recursiveFactorialCalc(0))
+// const res = recursiveFactorialCalc(0);
+// console.log(res);
+
+module.exports = {iterativeFactorialCalculation, recursiveFactorialCalc};
+
 
 
